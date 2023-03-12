@@ -3050,6 +3050,9 @@ class PartialEvaluator {
               });
             }
             break;
+          case _util.OPS.endText:
+            flushTextContentItem();
+            break;
           case OPS.showText:
             if (!stateManager.state.font) {
               self.ensureStateFont(stateManager.state);
